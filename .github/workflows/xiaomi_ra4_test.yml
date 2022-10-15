@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 编译小米R4A千兆版_测试加速编译
+name: 编译小米R3P_测试加速编译
 
 on:
   repository_dispatch:
