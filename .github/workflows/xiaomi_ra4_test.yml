@@ -64,7 +64,7 @@ jobs:
         ls -al
         unzip c985a54a613ed148621dcc99cf0d37345bb44b00.zip
         ls -al
-        mv c985a54a613ed148621dcc99cf0d37345bb44b00 openwrt
+        mv lede-c985a54a613ed148621dcc99cf0d37345bb44b00 openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         ls -al
 
