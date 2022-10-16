@@ -99,6 +99,8 @@ jobs:
       id: package
       run: |
         cd openwrt
+        rm -rf ./.config
+        wget https://raw.githubusercontent.com/chenxqiyu/lede/master/.config
         make defconfig
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
