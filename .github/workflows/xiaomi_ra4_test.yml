@@ -59,8 +59,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        #git clone $REPO_URL -b $REPO_BRANCH openwrt
-        wget https://github.com/coolsnowwolf/lede/archive/c985a54a613ed148621dcc99cf0d37345bb44b00.zip
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        #wget https://github.com/coolsnowwolf/lede/archive/c985a54a613ed148621dcc99cf0d37345bb44b00.zip
         ls -al
         unzip c985a54a613ed148621dcc99cf0d37345bb44b00.zip
         ls -al
@@ -93,6 +93,9 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
+        rm -rf ./.config*
+        wget https://raw.githubusercontent.com/chenxqiyu/lede/master/.config
+        
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
