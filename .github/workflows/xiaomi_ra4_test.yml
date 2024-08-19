@@ -59,8 +59,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
-        #wget https://github.com/coolsnowwolf/lede/archive/c985a54a613ed148621dcc99cf0d37345bb44b00.zip
+        #git clone $REPO_URL -b $REPO_BRANCH openwrt
+        wget https://github.com/coolsnowwolf/lede/archive/c985a54a613ed148621dcc99cf0d37345bb44b00.zip
         ls -al
         unzip c985a54a613ed148621dcc99cf0d37345bb44b00.zip
         ls -al
